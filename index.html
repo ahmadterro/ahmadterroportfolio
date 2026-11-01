@@ -605,15 +605,24 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .hero-inner { flex-direction: column-reverse; align-items: flex-start; gap: 32px; }
-    .hero-portrait { width: clamp(130px, 38vw, 200px); }
+    .hero {
+      min-height: auto;
+      align-items: flex-start;
+      padding-top: 100px;
+      padding-bottom: 56px;
+    }
+    .hero-inner { flex-direction: row; align-items: center; gap: 20px; }
+    .hero-portrait { width: clamp(96px, 26vw, 140px); }
+    .hero-eyebrow { margin-bottom: 16px; }
+    .hero-name { margin-bottom: 20px; }
+    .hero-title { margin-bottom: 28px; }
   }
 
   @media (max-width: 700px) {
     .hero {
       padding-left: max(24px, env(safe-area-inset-left, 0px));
       padding-right: max(24px, env(safe-area-inset-right, 0px));
-      padding-bottom: 60px;
+      padding-bottom: 56px;
     }
     .section {
       padding-top: 64px;
