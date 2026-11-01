@@ -9,13 +9,13 @@
     --ink-soft:  #4a4a4a;
     --paper:     #f7f5f0;
     --paper-alt: #eeece7;
-    --gold:      #b89a5e;
-    --gold-dim:  #8c7444;
+    --gold:      #bc553a;
+    --gold-dim:  #8d402b;
     --line:      rgba(0,0,0,0.1);
     --hero-bg:   #0d0d0d;
     --hero-fg:   #f7f5f0;
     --hero-muted:#9a9589;
-    --hero-gold: #c8a96a;
+    --hero-gold: #cc6446;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -24,8 +24,8 @@
       --ink-soft:  #a09a8e;
       --paper:     #181612;
       --paper-alt: #221f1a;
-      --gold:      #c8a96a;
-      --gold-dim:  #96793e;
+      --gold:      #cc6446;
+      --gold-dim:  #9a341a;
       --line:      rgba(255,255,255,0.1);
       color-scheme: dark;
     }
@@ -35,8 +35,8 @@
     --ink-soft:  #a09a8e;
     --paper:     #181612;
     --paper-alt: #221f1a;
-    --gold:      #c8a96a;
-    --gold-dim:  #96793e;
+    --gold:      #cc6446;
+    --gold-dim:  #9a341a;
     --line:      rgba(255,255,255,0.1);
     color-scheme: dark;
   }
@@ -73,7 +73,7 @@
     right: -5%;
     width: 55%;
     height: 80%;
-    background: radial-gradient(ellipse at 70% 30%, rgba(184,154,94,0.12) 0%, transparent 65%);
+    background: radial-gradient(ellipse at 70% 30%, rgba(188,85,58,0.12) 0%, transparent 65%);
     pointer-events: none;
   }
 
@@ -95,7 +95,7 @@
     width: clamp(200px, 24vw, 340px);
     aspect-ratio: 4 / 5;
     position: relative;
-    border: 1px solid rgba(184,154,94,0.45);
+    border: 1px solid rgba(188,85,58,0.45);
     overflow: hidden;
   }
 
@@ -362,7 +362,7 @@
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--gold);
-    box-shadow: 0 0 0 4px rgba(184,154,94,0.12);
+    box-shadow: 0 0 0 4px rgba(188,85,58,0.12);
   }
 
   .client-avatar {
@@ -572,7 +572,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     background: none;
-    border: 1px solid rgba(200,169,106,0.4);
+    border: 1px solid rgba(204,100,70,0.4);
     color: var(--hero-gold);
     padding: 6px 12px;
     cursor: pointer;
@@ -580,7 +580,7 @@
     transition: background 0.15s, border-color 0.15s;
     font-family: 'DM Sans', sans-serif;
   }
-  .copy-btn:hover { background: rgba(200,169,106,0.1); border-color: var(--hero-gold); }
+  .copy-btn:hover { background: rgba(204,100,70,0.1); border-color: var(--hero-gold); }
   .copy-btn:focus-visible { outline: 2px solid var(--hero-gold); outline-offset: 2px; }
 
   /* ── NAV ── */
@@ -633,7 +633,7 @@
     text-decoration: none;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: #c8a96a; }
+  .nav-links a:hover { color: #cc6446; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -668,7 +668,7 @@
       row-gap: 38px;
     }
     .hero-text { display: contents; }
-    .hero-eyebrow { grid-area: eyebrow; margin-bottom: 0; font-size: 13px; letter-spacing: 0.22em; }
+    .hero-eyebrow { grid-area: eyebrow; margin-bottom: 0; font-size: clamp(8.5px, 2.6vw, 13px); letter-spacing: 0.1em; white-space: nowrap; }
     .hero-name { grid-area: name; margin-bottom: 0; font-size: clamp(42px, 13.5vw, 78px); line-height: 0.96; align-self: center; min-width: 0; }
     .hero-title { grid-area: title; margin-bottom: 0; max-width: none; font-size: clamp(17px, 4.3vw, 20px); line-height: 1.55; }
     .hero-cta { grid-area: cta; font-size: 15px; }
@@ -721,6 +721,10 @@
     .client-avatar-outer { margin-bottom: 20px; }
     .client-ig-badge { width: 22px; height: 22px; }
     .client-ig-badge svg { width: 12px; height: 12px; }
+    .client-ig-stats { flex-direction: column; gap: 7px; }
+    .ig-stat { flex-direction: row; justify-content: center; align-items: baseline; gap: 7px; padding: 0; }
+    .ig-stat + .ig-stat { border-left: none; }
+    .ig-label { white-space: nowrap; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -849,8 +853,8 @@
         <div class="client-desc">Scientist & Founder, Al Warsheh</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">1,910</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">2.3M</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">4,144</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">2.3M</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">4,144</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -867,8 +871,8 @@
         <div class="client-desc">Orthopedic Surgeon</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">1,047</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">603K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">962</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">603K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">962</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -885,8 +889,8 @@
         <div class="client-desc">Drama Therapist & Film Director</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">459</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">69.9K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">4,281</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">69.9K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">4,281</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -903,8 +907,8 @@
         <div class="client-desc">Community platform by Dr. Khaled Ghattass</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">1,113</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">53.3K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">10</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">53.3K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">10</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -921,8 +925,8 @@
         <div class="client-desc">Psychologist</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">192</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">24K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">11</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">24K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">11</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -939,8 +943,8 @@
         <div class="client-desc">Biodecoding & holistic wellness</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">305</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">23.5K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">2,558</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">23.5K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">2,558</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -957,8 +961,8 @@
         <div class="client-desc">Mind, body & soul wellness brand</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">603</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">20.1K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">188</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">20.1K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">188</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -975,8 +979,8 @@
         <div class="client-desc">Lounge — Come for the view, stay for the vibe</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">74</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">19.7K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">1</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">19.7K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">1</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -993,8 +997,8 @@
         <div class="client-desc">Community bookstore</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">305</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">12.3K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">5</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">12.3K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">5</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -1011,8 +1015,8 @@
         <div class="client-desc">Restaurant — Barja, Lebanon</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">166</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">12.3K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">2</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">12.3K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">2</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -1029,8 +1033,8 @@
         <div class="client-desc">Gate of Champions — MMA sports league, Middle East</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">368</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">10.1K</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">7</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">10.1K</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">7</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -1047,8 +1051,8 @@
         <div class="client-desc">Sports club — Barja, Lebanon</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">114</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">4,032</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">5</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">4,032</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">5</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -1065,8 +1069,8 @@
         <div class="client-desc">Skincare & aesthetic treatments clinic — Beirut</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">248</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">2,570</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">505</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">2,570</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">505</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -1083,8 +1087,8 @@
         <div class="client-desc">Professional cleaning services — Beirut</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">262</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">1,030</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">175</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">1,030</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">175</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
@@ -1101,8 +1105,8 @@
         <div class="client-desc">Educational summer program under Al Warsheh</div>
         <div class="client-ig-stats">
           <div class="ig-stat"><span class="ig-num">31</span><span class="ig-label">posts</span></div>
-          <div class="ig-stat"><span class="ig-num">642</span><span class="ig-label">follow<wbr>ers</span></div>
-          <div class="ig-stat"><span class="ig-num">1</span><span class="ig-label">follow<wbr>ing</span></div>
+          <div class="ig-stat"><span class="ig-num">642</span><span class="ig-label">followers</span></div>
+          <div class="ig-stat"><span class="ig-num">1</span><span class="ig-label">following</span></div>
         </div>
       </div>
     </a>
