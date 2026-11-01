@@ -563,6 +563,15 @@
     user-select: all;
   }
 
+  a.contact-item-value {
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  a.contact-item-value:hover,
+  a.contact-item-value:focus-visible {
+    color: var(--hero-gold);
+  }
+
   .copy-btn {
     display: inline-flex;
     align-items: center;
@@ -780,7 +789,7 @@
     </p>
     <div class="about-stats">
       <div class="stat">
-        <div class="stat-number">15+</div>
+        <div class="stat-number">50+</div>
         <div class="stat-label">Clients &amp; brands served</div>
       </div>
       <div class="stat">
@@ -1127,7 +1136,7 @@
     <div class="contact-links">
       <div class="contact-item">
         <span class="contact-item-label">WhatsApp</span>
-        <span class="contact-item-value">+961 76 744 850</span>
+        <a class="contact-item-value" href="https://wa.me/message/CTE4H7VMB7ICD1" target="_blank" rel="noopener">+961 76 744 850</a>
         <button class="copy-btn" onclick="copyText('+96176744850', this)">Copy number</button>
       </div>
       <div class="contact-item">
