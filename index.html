@@ -625,26 +625,26 @@
     }
     .hero-inner {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 1fr) auto;
       grid-template-areas:
         "eyebrow eyebrow"
         "name    photo"
         "title   title"
         "cta     cta";
       align-items: center;
-      column-gap: 24px;
-      row-gap: 18px;
+      column-gap: 28px;
+      row-gap: 38px;
     }
     .hero-text { display: contents; }
-    .hero-eyebrow { grid-area: eyebrow; margin-bottom: 0; }
-    .hero-name { grid-area: name; margin-bottom: 0; font-size: clamp(42px, 11vw, 70px); align-self: center; }
-    .hero-title { grid-area: title; margin-bottom: 0; max-width: none; }
-    .hero-cta { grid-area: cta; }
+    .hero-eyebrow { grid-area: eyebrow; margin-bottom: 0; font-size: 13px; letter-spacing: 0.22em; }
+    .hero-name { grid-area: name; margin-bottom: 0; font-size: clamp(42px, 13.5vw, 78px); line-height: 0.96; align-self: center; min-width: 0; }
+    .hero-title { grid-area: title; margin-bottom: 0; max-width: none; font-size: clamp(17px, 4.3vw, 20px); line-height: 1.55; }
+    .hero-cta { grid-area: cta; font-size: 15px; }
     .hero-portrait {
       grid-area: photo;
       align-self: center;
       justify-self: end;
-      width: clamp(118px, 32vw, 168px);
+      width: clamp(118px, 35vw, 195px);
     }
   }
 
@@ -666,9 +666,15 @@
       padding-left: max(24px, env(safe-area-inset-left, 0px));
       padding-right: max(24px, env(safe-area-inset-right, 0px));
     }
+    .section-heading { font-size: clamp(40px, 10vw, 56px); }
+    .section-label { font-size: 11px; margin-bottom: 24px; }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
-    .about-stats { flex-direction: row; flex-wrap: wrap; }
-    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-body { font-size: 18px; }
+    .about-stats { flex-direction: row; flex-wrap: wrap; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .contact-tagline { font-size: 18px; max-width: none; }
+    .contact-links { gap: 36px; }
+    .contact-item-value { font-size: 19px; }
     .hero-scroll-line { display: none; }
     nav {
       padding-left: max(24px, env(safe-area-inset-left, 0px));
