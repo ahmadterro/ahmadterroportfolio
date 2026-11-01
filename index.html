@@ -606,10 +606,22 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero {
-      min-height: auto;
-      align-items: flex-start;
+      min-height: 100svh;
+      align-items: center;
       padding-top: 100px;
       padding-bottom: 56px;
+    }
+    .section {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-section {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .hero-inner {
       display: grid;
@@ -643,12 +655,14 @@
       padding-bottom: 56px;
     }
     .section {
-      padding-top: 64px;
+      padding-top: 96px;
       padding-bottom: 64px;
       padding-left: max(24px, env(safe-area-inset-left, 0px));
       padding-right: max(24px, env(safe-area-inset-right, 0px));
     }
     .contact-section {
+      padding-top: 96px;
+      padding-bottom: 64px;
       padding-left: max(24px, env(safe-area-inset-left, 0px));
       padding-right: max(24px, env(safe-area-inset-right, 0px));
     }
